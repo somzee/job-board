@@ -1,0 +1,6 @@
+<h1><%= @job.title %></h1>
+
+  <p><%= @job.description %></p>
+  <p><%= @job.location %></p>
+  <h5><%= button_to "Edit Posting", edit_job_path(@job), method: :get, class: "btn btn-info"%> </h5>
+  <h5><%= button_to 'Delete Posting', @job, method: :delete, class: "btn btn-danger"%> </h5>

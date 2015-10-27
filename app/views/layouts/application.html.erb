@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JobBoard</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class='clearfix'>
+  <div class="left-nav">
+    <ul>
+      <li><%= link_to "Home", jobs_path %></li>
+    </ul>
+  </div>
+  <div class="right-nav">
+    <ul>
+      <li><%= link_to "Add Job", new_job_path %></li>
+    </ul>
+  </div>
+</header>
+
+<div class='content'>
+  <%= yield %>
+</div>	
+
+</body>
+</html>

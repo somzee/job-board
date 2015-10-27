@@ -1,0 +1,26 @@
+<h1>SF Bay Area Open Jobs</h1>
+
+<% if flash['errors'] %>
+	<% flash['errors'].each do |error| %>
+		<%= content_tag :div, error, class: "bg-danger" %>
+	<% end %>
+	<br>
+<% elsif flash['success'] %>
+	<%= content_tag :div, flash['success'], class: "bg-success" %>
+	<br>
+<% end %>
+
+<table id="jobs" class="table" data-source="<%= jobs_url(format: "json") %>">
+<thead>
+    <tr>
+      <th>Job Title</th>
+      <th>Job Description</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+
+
